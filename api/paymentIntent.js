@@ -19,7 +19,7 @@ async function paymentIntent(req, res) {
             shipping,
         });
         res.status(200).json({
-            clientSecret: paymentIntent.client_secret,
+            clientSecret: paymentIntent.client_secret, id: paymentIntent.id
         })
     } catch(error){
         console.log(error);
